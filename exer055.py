@@ -1,22 +1,17 @@
 '''Ler 20 números e exibir qual foi o menor e o maior informados.'''
-
 contador = 0
 
+while contador < 5:
+    num = float(input('Digite um número: '))
+    contador += 1
 
-num = float(input('Número:\n'))
-maior = num
-menor = num
+    if contador == 1:
+        maior = menor = num
+    else:
+        if num > maior:
+            maior = num
+        if num < menor:
+            menor = num 
 
-while contador < 2:
-    num = float(input('Número:\n'))
+print(f'O maior número digitado é {maior} e o menor {menor}')
 
-    contador = contador + 1
-    if num > maior:
-        maior = num
-
-    elif num < maior:
-        menor = num
-
-    
-
-print(maior, menor)
