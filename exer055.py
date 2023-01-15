@@ -1,7 +1,7 @@
 '''Ler 20 números e exibir qual foi o menor e o maior informados.'''
 contador = 0
 
-while contador < 5:
+while contador < 20:
     num = float(input('Digite um número: '))
     contador += 1
 
