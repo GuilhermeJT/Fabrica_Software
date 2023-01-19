@@ -30,7 +30,14 @@ def teste():
             print("Impar")
     else:
         print("Decimal")
-
+        if res % 2 == 0:
+            print("Par")
+            if res > 0:
+                print("Positivo")
+            else:
+                print("Negativo")
+        else:
+            print("Impar")
 
 match operacao:
     case '+':
