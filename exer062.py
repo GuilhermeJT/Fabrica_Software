@@ -4,9 +4,12 @@ cont = 1
 resultado = 1
 
 numero = int(input('Digite o número que você quer fatorar:\n'))
+if numero > 1:
+    while cont <= numero:
+        resultado *= cont
+        cont += 1
+    print(resultado)
 
-while cont <= numero:
-    resultado *= cont
-    cont += 1
+else:
+    print('ERRO!')
 
-print(resultado)
