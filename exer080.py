@@ -3,12 +3,12 @@
 idades = []
 alturas = []
 
-for c in range (3):
+for c in range (5):
     idades.append(int(input('Digite sua idade: ')))    
     alturas.append(float(input('Digite sua altura: ')))
     print(50 * '=')
 
-for c in range (-1, -4,-1):
+for c in range (-1, -6,-1):
     print(idades[c], end = ' ')
     print(alturas[c], end = ' ')
 
