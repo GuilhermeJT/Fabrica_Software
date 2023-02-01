@@ -2,12 +2,12 @@
 
 prof1 = {
     'Nome' : '',
-    'salario' : ''
+    'salario' : 0
 }
 
 prof2 = {
     'Nome' : '',
-    'salario' : ''
+    'salario' : 0
 }
 
 prof1['Nome'] = str(input('Digite o nome da primeira professora: '))
