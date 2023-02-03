@@ -19,8 +19,12 @@ expresso  - R$1,52 - 2
 capuccino - R$2,17 - 3
 mocaccino - R$2,36 - 4''')
 print(30 * '=')
-cafe = int(input('Qual café você quer: '))
-valor = float(input('Com qual valor você ira pagar: R$'))
+while True:
+    cafe = int(input('Qual café você quer: '))
+    if cafe == 1 or cafe == 2 or cafe == 3 or cafe == 4:
+        break
+    else:
+        print('Código invalido, tente novamente!!\n')
 
 match cafe:
     case 1:
@@ -35,35 +39,45 @@ match cafe:
     case 4:
         valor_cafe = 2.36
 
+while True:
+    valor = float(input('Com qual valor você ira pagar: R$'))
+    if valor >= valor_cafe:
+        break
+    else:
+        print('\nValor inserido menor que valor do café selecionado')
+        print(f'Insira um valor maior!!\n')
+
+
 troco = valor - valor_cafe
 
-if valor >= valor_cafe:
-    num = valor - valor_cafe
 
-    real = num // 1.0
-    num = num - (real * 1.0)
+num = valor - valor_cafe
 
-    cinquenta = num // 0.5
-    num = num - (cinquenta * 0.5)
+real = num // 1.0
+num = num - (real * 1.0)
 
-    vinteCinco = num // 0.25
-    num = num - (vinteCinco * 0.25)
+cinquenta = num // 0.5
+num = num - (cinquenta * 0.5)
 
-    dez = num // 0.10
-    num = num - (dez * 0.10)
+vinteCinco = num // 0.25
+num = num - (vinteCinco * 0.25)
 
-    cinco = num // 0.05
-    num = num - (cinco * 0.25)
+dez = num // 0.10
+num = num - (dez * 0.10)
 
-    um = num // 0.01
-else:
-    print('ERRO!')
+cinco = num // 0.05
+num = num - (cinco * 0.05)
 
-print(f'O valor do troco é de R${troco}')
+um = num // 0.01
+
+print(f'O valor do troco é de R${troco:.2f}')
 print(f'Moedas de R$1 real = {real} ')
 print(f'Moedas de R$0,50 centavos = {cinquenta}')
 print(f'Moedas de R$0,25 centavos = {vinteCinco}')
 print(f'Moedas de R$0,10 centavos = {dez}')
 print(f'Moedas de R$0,05 centavos = {cinco}')
 print(f'Moedas de R$0,01 centavos = {um}')
+
+
     
+
