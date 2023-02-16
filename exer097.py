@@ -44,10 +44,19 @@ for c in range(5):
     kmLitro.append(float(input('Km por litro: ')))
     print()
 
+menorConsumo = 0
 for i in range(5):
     litro = 1000 / kmLitro[i]
     litros.append(litro)
+
+    if i == 1:
+        menorConsumo = litro 
     
+    else:
+        if litro < menorConsumo:
+            menorConsumo = litro
+            modeloMenor = modelo[i]   
+
     valor = litros[i] * 2.25
     valores.append(valor)
 
@@ -57,3 +66,4 @@ for c in range(5):
     print(f'{c+1} - {modelo[c]} - {kmLitro[c]} - {litros[c]:.1f} litros - R$ {valores[c]:.1f} ')
 
 
+print(f'\nO menor consumo é do {modeloMenor}!!!')
