@@ -68,7 +68,12 @@ num = num - (dez * 0.10)
 cinco = num // 0.05
 num = num - (cinco * 0.05)
 
-um = num // 0.01
+um = 0
+
+while num >= 0:
+        um += 1
+        num = num - 0.01
+
 
 print(f'O valor do troco é de R${troco:.2f}')
 print(f'Moedas de R$1 real = {real} ')
@@ -76,7 +81,7 @@ print(f'Moedas de R$0,50 centavos = {cinquenta}')
 print(f'Moedas de R$0,25 centavos = {vinteCinco}')
 print(f'Moedas de R$0,10 centavos = {dez}')
 print(f'Moedas de R$0,05 centavos = {cinco}')
-print(f'Moedas de R$0,01 centavos = {um}')
+print(f'Moedas de R$0,01 centavos = {um:.1f}')
 
 
     
